@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+<style type="text/css">
+
+
+  body{
+            margin: 90px;
+            padding: 70;
+            font-family: sans-serif;
+            font-size: 20px;
+            background-color:   #87CEFA;
+            background-size: cover;
+            border-left-color:  #00FF00;
+        }
+
+</style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="form-group" >
+              {% if messages %}
+            <ul class="messages">
+                  {% for message in messages %}
+                <li>
+                    <div class="alert alert-success">{{message}}</div>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        <div class="col-md-5">
+           <h1 style="color:   #4B0082 ">To Add A New Teacher On Exam Committee, Please fill the given criteria  : </h1>
+            <form method = "post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit">submit</button>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
