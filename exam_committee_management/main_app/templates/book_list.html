@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title  >  Result Upload Table </title>
+
+
+<style type="text/css">
+
+
+body{
+
+background-color:#DC143C;
+
+}
+
+table.center {
+    margin-left:auto;
+    margin-right:auto;
+  }
+
+table th{
+
+
+text-align: left;
+background-color:	#000000;
+color: #FFF;
+padding: 10px 60px 20px 60px;
+font-size: 37px;
+
+
+}
+
+table  td{
+
+	border:2px solid;
+	padding: 7px 15px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<h1>  Result Status Table : </h1>
+
+<table class="center" >
+
+<tr>
+
+
+<th> Course Name </th>
+<th>submit time</th>
+<th>expected time</th>
+<th>status</th>
+</tr>
+{% for i in ob %}
+<tr>
+	<td>{{i.description}}</td>
+	<td>{{dat}}</td>
+	<td>{{ab}}</td>
+	<td>{{comment}}</td>
+</tr>
+  {% endfor %}
+</table>
+
+</body>
+
+</html>

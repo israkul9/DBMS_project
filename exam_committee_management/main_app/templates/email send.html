@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+
+
+<head>
+
+
+<style type="text/css">
+
+
+  body{
+            margin: 90px;
+            padding: 70;
+            font-family: sans-serif;
+            font-size: 27px;
+            background-color:#DB7093;
+            background-size: cover;
+            border-left-color:  #00FF00;
+        }
+
+</style>
+</head>
+<body>
+<form class="box" action="" method="post">
+{% csrf_token %}
+<h2>Send e-mail to someone@example.com:</h2>
+
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Message:<br>
+<input type="text" name="Message" size="50"><br><br>
+<input type="submit" value="Send">
+</form>
+
+</body>
+</html>
+
